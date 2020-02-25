@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Online shop</title>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__logo">Online shop</h1>
+            <div class="cart" onclick="CART.makeCheckout()">
+                Корзина:
+                <span class="cart__quantity"></span>
+                 товаров
+                <div class="cart__checkout hidden"></div>
+            </div>
+        </header>
+        <main class="products">
+            <div class="products__sorting">
+                <span class="products__sorting__item" onclick="showProducts('title')">По названию</span>
+                <span>|</span>
+                <span class="products__sorting__item" onclick="showProducts('price')">По цене</span>
+                <span>|</span>
+                <span>Только в наличии: 
+                    <span class="products__sorting__item" onclick="showProducts('available')">Да</span>/
+                    <span class="products__sorting__item" onclick="showProducts('all')">Нет</span>
+                </span>
+            </div>
+            <div class="products__list"></div>
+            <div class="pagination"></div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
